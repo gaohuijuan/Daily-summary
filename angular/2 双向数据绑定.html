@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html ng-app="nameMod">
+<!--当指定ng-app之后，angular会自动创建一个$rootScope-->
+<head>
+    <meta charset="UTF-8">
+    <title>学习angular。js</title>
+</head>
+<body ng-controller="nameCtrl">
+<input type="text" ng-model="age" />
+<!--那么所有的表达式取属性值会自动从$rootScope上进行取值，如果此时也定义了控制器，就有了买一送一的$scope,这是就会按照原型继承的方式来查找，首先查找自身父元素的标签上有没有$scope,如果有就使用这个，如果没有就继续查找，直到找到ng-app身上的$rootScope
+-->
+<!--{{name}}-->
+{{age}}
+</body>
+
+<script src="angular.js"></script>
+<script>
+ 
+    angular.module('nameMod',[]);
+    angular.module('nameMod').controller('nameCtrl',function($scope){
+        $scope.age='99';
+    })
+    
+</script>
+</html>

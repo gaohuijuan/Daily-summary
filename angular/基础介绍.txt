@@ -1,0 +1,41 @@
+为什么要学习angular.js
+1
+2 现在使用最广泛的框架之一
+3 前后端分离，后端只提供数据接口，路由（跳转，比如：登录框，登陆完成后跳转到欢迎页），模板渲染等都在前端完成
+4 HTML和js分离，展示和逻辑分离
+5 减少js代码，减少DOM元素查找，事件绑定等代码
+6 适合API的方式进行开发
+
+什么是MVC
+Model 数据【模型】层
+View 【视图】层，负责展示
+Controller 业务逻辑和【控制】逻辑
+
+为什么需要MVC
+1 代码规模越来越大，切分职责
+2 相同逻辑代码要复用
+3 需求变更需要重构
+4 职责清晰，代码模块化
+5 MVC只是手段，目标是【模块化】和【复用】
+
+angular使用流程
+1 下载angular.js
+2 引入angular.js脚本文件到当前页面
+3 通过指定ng-app定义angular应用的控制范围
+4 一切从模块开始，先定义模块
+5 在模块下声明控制器，$scope添加属性
+6 在DOM元素上通过ng-controller指定此控制器
+7 在此DOM元素下面编写表达式读取$scope上的属性值
+
+双向数据绑定
+1 数据($scope)变化响应UI
+2 UI(输入框)变化影响数据($scope)
+3 ng-model将$scope变量与输入框绑定
+
+常用指令
+1 ng-bind 绑定HTML元素
+2 ng-click位当前元素click事件绑定$scope上对应的方法
+3 ng-if 布尔类型为true执行内部指令，为false时不执行内部指令
+4 ng-class 定义元素的class样式，属性值如{'class1':expression,'class2':expression2}
+5 ng-show 布尔类型为true时显示 false时隐藏
+6 ng-hide 布尔类型为false时显示true时隐藏
